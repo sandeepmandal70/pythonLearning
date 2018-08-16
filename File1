@@ -1,1 +1,21 @@
+def myfunction(inputList):
+    evenPlace=""
+    oddPlace=""
+    for word in inputList:
+        for letter in word:
+            if word.index(letter)==0:
+                evenPlace=evenPlace+letter
+            elif word.index(letter)%2==0 and word.index(letter)!=0:
+                evenPlace=evenPlace+letter
+            elif word.index(letter)%2!=0 and word.index(letter)!=0:
+                oddPlace=oddPlace+letter
+        print(evenPlace,oddPlace)
+        evenPlace=""
+        oddPlace=""
 
+N=int(input())
+inList=[]
+for i in range(N):
+    s=input()
+    inList.append(s)
+myfunction(inList)
